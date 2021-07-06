@@ -25,7 +25,7 @@ def get_description(event_name):
     result = DefaultDescription.objects.filter(event_name=event_name)
     assert len(result) <= 1
     if len(result) == 0:
-        return 'Please contact CR for link'
+        return 'Check http://mamalinkde.herokuapp.com/ or Classroom for link'
     return result[0].description
 
 
