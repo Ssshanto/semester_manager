@@ -61,39 +61,5 @@
             <div class="event">Hooray! No more classes today. Good job keeping up!</div>
         {% endif %}
         </div>
-
-        <div id="upcoming" class="card">
-        <div class="header">Upcoming Events</div>
-        {% if upcoming_events %}
-            {% for event in upcoming_events %}
-                <div class="event">
-                    <div class="header">
-                        <p>
-                            {{ event.name }} <br>
-                            <small class="time">
-                                {{ event.begin_time| localtime | date }},
-                                {{ event.begin_time | localtime | time:"G:i"}} -
-                                {{ event.end_time | localtime | time:"G:i"}}
-                            </small>
-                        </p>
-                        <span class="material-icons">
-                            {% if event.status == 'done' %}
-                                done
-                            {% elif event.status == 'scheduled' %}
-                                upcoming
-                            {% else %}
-                                autorenew
-                            {% endif %}
-                        </span>
-                    </div>
-                    <div class="description">
-                        {{ event.description | safe }}
-                    </div>
-                </div>
-            {% endfor %}
-        {% else %}
-            <div class="event">Looks like this is the end...</div>
-        {% endif %}
-        </div>
     </div>
 {% endblock %}

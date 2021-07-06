@@ -21,12 +21,8 @@ def index(request):
 
     tomorrow = today + datetime.timedelta(days=1)
 
-    upcoming_events = Event.objects.filter(begin_time__gte=tomorrow)\
-                                   .order_by('begin_time')[:10]
-
     return render(request, 'events/events.html', {'events': events,
-                                                  'special_events': special_events,
-                                                  'upcoming_events': upcoming_events,
+                                                  'special_events': special_events
                                                   })
 
 
