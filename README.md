@@ -40,4 +40,6 @@ Now that everything is set, we can run the website locally using `manage.py`
 $ python manage.py runserver
 ```
 
-Originally created by shantanu404, IUT CSE-19, Section 1 semester manager hosted at: https://ssshanto.pythonanywhere.com/
+Originally created by shantanu404, IUT EEE-19. 
+
+IUT CSE-19, Section 1 semester manager hosted at: https://ssshanto.pythonanywhere.com/
